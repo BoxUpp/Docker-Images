@@ -1,10 +1,6 @@
 #Docker
 
-##Description
-
 This is docker file for instaling ssh service and puppet on Linux Centos Container  
-
-##Setup
 
 ###Contributors
 
