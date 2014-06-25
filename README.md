@@ -2,7 +2,7 @@
 
 This is docker file for instaling ssh service and puppet on Linux Centos Container.  
 
-#Puppet Provisioning in docker container through Vagrantfile 
+#Puppet Provisioning in docker container through Vagrant.
 
 This is a sample vagrant file for puppet provisioning in linux container through vagrant-docker plugin.
 
