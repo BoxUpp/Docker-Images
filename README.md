@@ -4,13 +4,29 @@ This is docker file for instaling ssh service and puppet on Linux Centos Contain
 
 #Puppet Provisioning in docker container through Vagrantfile 
 
-This is a sample vagrant file.
+This is a sample vagrant file for puppet provisioning in linux container through vagrant-docker plugin.
 
 ```Vagrantfile
-node "puppet.vagrant.jboss.com" 
-    {
-        include jboss 
-    }
+Vagrant.configure("2") do |config|
+                config.vm.provider "docker" do |master|
+                master.image   = "boxupp/centos-puppet:V1.0"
+                master.name    = "master"
+                master.volumes << '/var/lib/docker'
+                master.has_ssh = true
+        end
+        config.vm.hostname  = "www.booxup.com"
+                config.ssh.username = "root"
+                config.ssh.password = "root123"
+                config.vm.synced_folder "./keys" , "/vagrant"
+                config.vm.synced_folder "manifests", "/etc/puppetlabs/puppet/manifests"
+                config.vm.synced_folder "modules", "/etc/puppetlabs/puppet/modules"
+
+        config.vm.provision  "puppet" do |master|
+                master.manifests_path = "manifests"
+                master.manifest_file = "site.pp"
+                master.module_path = "modules"
+        end
+end
 ```
 
 
