@@ -30,6 +30,30 @@ end
 ```
 
 
+This a sample site.pp file for puppet provisoning.
+
+```site
+        node "www.booxup.com"
+        {
+               
+               #Add your puppet modules 
+               include jboss
+        }
+
+
+
+        if versioncmp($::puppetversion,'3.6.1') >= 0 {
+
+        $allow_virtual_packages = hiera('allow_virtual_packages',false)
+
+        Package {
+                allow_virtual => $allow_virtual_packages,
+                }
+        }
+```
+
+
+
 ###Contributors
 
 The list of contributors can be found at: [https://github.com/BoxUpp/Puppet-Modules/graphs](https://github.com/BoxUpp/Puppet-Modules/graphs)
