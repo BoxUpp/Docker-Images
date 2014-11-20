@@ -3,11 +3,11 @@
 This repository consist of Dockerfile for folllwing images they have ssh service enabled with puppet 
 installed.
 
-###boxupp/centos-base:latest
+######boxupp/centos-base:latest
  
-###boxupp/ubuntu-base:latest 
+#####boxupp/ubuntu-base:latest 
     
-###boxupp/debian-base:latest    
+#####boxupp/debian-base:latest    
 
 ###Contributors
 
