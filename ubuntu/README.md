@@ -1,15 +1,15 @@
 #Docker
 
-This is docker file for instaling ssh service and puppet on Linux Centos Image.  
+This is docker file for instaling ssh service and puppet on Ubuntu  Images.  
 
 #Puppet Provisioning in docker container through Vagrant.
 
-This is a sample vagrant file for puppet provisioning in centos container through Vagrant.
+This is a sample vagrant file for puppet provisioning in Ubuntu container through Vagrant.
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
                 config.vm.provider "docker" do |master|
-                master.image   = "boxupp/centos-base:latest"
+                master.image   = "boxupp/ubuntu-base:latest"
                 master.name    = "master"
                 master.volumes << '/var/lib/docker'
                 master.has_ssh = true

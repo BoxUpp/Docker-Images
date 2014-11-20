@@ -19,7 +19,6 @@ EXPOSE 22
 CMD ["/ssh.sh"]
 ##ADD epel repo to the base image 
 RUN rpm -ivUh http://mirror-fpt-telecom.fpt.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
-RUN yum install -y MAKEDEV
 ##EDIT IN YUM REPOSITORY
 RUN  sed -i "42 s/enabled=0/enabled=1/" /etc/yum.repos.d/CentOS-Base.repo
 ##ADD puppet package to the container 

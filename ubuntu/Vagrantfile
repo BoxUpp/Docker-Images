@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
                 config.vm.provider "docker" do |master|
-                master.image   = "boxupp/centos-base:latest"
+                master.image   = "boxupp/ubuntu-base:latest"
                 master.name    = "master"
                 master.volumes << '/var/lib/docker'
                 master.has_ssh = true
@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
         config.vm.hostname  = "www.booxup.com"
                 config.ssh.username = "root"
                 config.ssh.password = "root123"
-              
+         
         config.vm.provision  "puppet" do |master|
                 master.manifests_path = "manifests"
                 master.manifest_file = "site.pp"

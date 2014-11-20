@@ -1,13 +1,12 @@
 #Docker
 
-This repository consist of Dockerfile for folllwing images they have ssh service enabled with puppet
+This repository consist of Dockerfile for folllwing images they have ssh service enabled with puppet 
+installed.
 
 ###boxupp/centos-base:latest 
 
 ###boxupp/ubuntu-base:latest     
-‎
-###boxupp/redhat-base:latest
-‎
+‎‎
 ###boxupp/debian-base:latest    
 
 
